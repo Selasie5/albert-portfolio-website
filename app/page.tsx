@@ -4,7 +4,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { useRef } from "react";
 import ResearchInterestCard from "./components/ResearchInterestCard";
-import ResearchArticles from "./components/ResearchArticles";
+import { researchArticles } from "./ResearchArticles";
 
 export default function Home() {
   const scrollToSection = useRef<HTMLDivElement>(null);
@@ -16,12 +16,12 @@ export default function Home() {
   };
 
   return (
-    <main className="min-h-screen bg-cover bg-center bg-no-repeat text-white bg-white">
+    <main className="min-h-screen bg-cover bg-center bg-no-repeat text-white bg-white space-y-64 md:space-y-24">
       {/* Top Section */}
       <section className="flex justify-center items-center gap-5 min-h-screen pl-10">
-        <div className="flex flex-col md:flex-row justify-center items-start gap-4-">
+        <div className="flex flex-col md:flex-row justify-center items-start gap-10 md:gap-4">
           <motion.div
-            className="w-3/5 space-y-5 my-auto px-5"
+            className="md:w-3/5 space-y-5 my-auto px-5"
             initial={{ opacity: 0, x: -100 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
@@ -29,7 +29,7 @@ export default function Home() {
             <h1 className="font-DM text-6xl font-medium text-black ">
               Hello! I&apos;m Albert a PhD Student and Biomedical Researcher at St. Augusta University
             </h1>
-            <p className="font-DM text-md font-normal text-gray-500 w-4/5 leading-normal">
+            <p className="font-DM text-md font-normal text-gray-500 md:w-4/5 leading-normal">
              I am passionate about advancing mobility and improving the quality of life for older adults. With a background in Biomedical Engineering, I focus on research in fall-risk predictors in individuals with mild traumatic brain injuries.
             </p>
             <button className="bg-primary/80 text-white text-[1rem] font-DM font-normal text-md px-10 py-4 rounded-sm group transition-all">
@@ -61,7 +61,7 @@ export default function Home() {
           </motion.div>
 
           <motion.div
-            className="w-2/5 h-screen overflow-hidden"
+            className="md:w-2/5 md:h-screen overflow-hidden"
             initial={{ opacity: 0, x: 100 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
@@ -77,7 +77,7 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="absolute bottom-5 right-5">
+      <div className="absolute bottom-1 md:bottom-5 right-5">
         <motion.button
           onClick={handleScroll}
           className="border-b border-b-white text-white  font-Reco text-lg tracking-wide font-normal flex justify-center items-center gap-2 "
@@ -97,7 +97,7 @@ export default function Home() {
     
       <motion.section
         ref={scrollToSection}
-        className="h-screen flex flex-col justify-center items-start px-20 gap-4 "
+        className="h-screen flex flex-col justify-center items-start px-5 md:px-20 gap-4 "
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}>
@@ -114,15 +114,17 @@ My career aspirations include becoming a research and teaching professional in t
         </p>
       </motion.section>
       <motion.section
-        className="h-screen flex flex-col justify-center items-end px-20 gap-4 "
+        className="h-screen flex flex-col justify-center items-end px-20 gap-6"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}>
           <div className="flex  justify-center items-center gap-4">
             <hr className="bg-dark w-24 h-[0.2rem]"/>
           <h2 className="text-black font-DM text-6xl font-normal">Research</h2>
-        
-          </div>
+          
+        </div>
+          
+          <p className="font-DM text-gray-500 text-sm">Here are some of my reasearch interest </p>
           <div className="flex justify-end items-center flex-wrap gap-4">
             <ResearchInterestCard interest="Predictors of falls in older adults"/>
             <ResearchInterestCard interest="Mild traumatic brain injuries and mobility impairment"/>
@@ -130,11 +132,52 @@ My career aspirations include becoming a research and teaching professional in t
             <ResearchInterestCard interest="Rehabilitation engineering"/>
             <ResearchInterestCard interest="Assistive technologies for aging populations"/>
           </div>
-          <div className="flex justify-center items-start gap-10">
-            <ResearchArticles imgSrc="/bg-blue.jpg" title="Fall Predictors in Older Adults with Mild TBIs" description=" Investigating biomechanical and environmental factors contributing to fall risks in older adults with mild traumatic brain injuries to develop predictive models and early interventions that enhance mobility and quality of life"/>
-            <ResearchArticles imgSrc="/bg-blue.jpg" title="Biomechanics of Mobility in Aging Populations" description="As a research assistant at KNUST, I studied how muscle weakness and joint degradation affect mobility in aging populations, which shaped my current work on fall-risk predictors."/>
-          </div>
+
       </motion.section>
+      <motion.section
+  className="h-screen flex flex-col justify-center items-start px-20 gap-6"
+  initial={{ opacity: 0, y: 100 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 1 }}
+>
+  <div className="flex justify-center items-center gap-4">
+    <hr className="bg-dark w-24 h-[0.2rem]" />
+    <h2 className="text-black font-DM text-6xl font-normal">Articles & Publications</h2>
+  </div>
+  <p className="text-sm text-gray-500 font-DM">
+    I have contributed actively to some key research topics and articles
+  </p>
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-20">
+    {researchArticles.map((researchArticle) => (
+      <div
+        key={researchArticle.id}
+        className="bg-cover bg-center h-[60vh] w-[35rem] flex flex-col justify-end items-start"
+        style={{ backgroundImage: `url(${researchArticle.imgSrc || '/default.jpg'})` }}
+      >
+        <div className="p-4 w-full space-y-7">
+          <h3 className="text-white font-medium text-2xl font-DM">{researchArticle.title}</h3>
+          <hr className="bg-white h-[0.05rem] w-full"/>
+          <div className="flex  justify-start items-center gap-4 font-DM">
+          <p className="text-white text-md">{researchArticle.dateOfPublication}</p>
+          <span className="bg-white w-2 h-2 rounded-md">
+          </span>
+          <p className="text-white text-md">{researchArticle.topic}</p>
+          <span className="bg-white w-2 h-2 rounded-md">
+          </span>
+
+          {researchArticle.link && (
+            <Link href={researchArticle.link} passHref className="text-md">
+             Read More
+            </Link>
+          )}
+          </div>
+        </div>
+      </div>
+    ))}
+  </div>
+</motion.section>
+
+      
     </main>
   );
 }
