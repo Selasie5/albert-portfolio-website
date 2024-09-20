@@ -4,7 +4,10 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { useRef } from "react";
 import ResearchInterestCard from "./components/ResearchInterestCard";
-import { researchArticles } from "./ResearchArticles";
+import { researchArticles } from "./data/ResearchArticles";
+import { Experience } from "./data/Experience";
+
+
 
 export default function Home() {
   const scrollToSection = useRef<HTMLDivElement>(null);
@@ -176,8 +179,40 @@ My career aspirations include becoming a research and teaching professional in t
     ))}
   </div>
 </motion.section>
+<motion.section
+  className="h-auto flex flex-col justify-center items-center px-20 gap-6"
+  initial={{ opacity: 0, y: 100 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 1 }}
+>
+  <div className="flex justify-center items-center gap-4">
+    <hr className="bg-dark w-24 h-[0.2rem]" />
+    <h2 className="text-black font-DM text-6xl font-normal">Working & Teaching Experiences</h2>
+  </div>
+  <p className="text-sm text-gray-500 font-DM">
+    I have contributed actively to some key research topics and articles
+  </p>
+  <div className=" w-full flex flex-col justify-center items-center gap-20">
+{Experience.map((experience)=>(
+    <div key={experience.id} className="flex flex-row justify-between items-center gap-96">
+        <div className=" w-4/5 flex flex-col justify-center items-start gap-2">
+          <span className="text-gray-700 text-lg uppercase font-DM">{experience.startDate} - {experience.endDate}</span>
+          <h4 className="text-3xl font-DM font-medium text-black">{experience.role}, {experience.company}</h4>
+          <p className="text-md text-gray-500 font-DM">{experience.description}</p>
+          </div>
+          <div className="w-1/5">
+            <button className="rounded-full border border-black px-5 py-2 text-md text-black">
+              <Link href={experience.link}>
+              Visit Link
+              </Link>
+            </button>
+            </div>
+    </div>
+))}
+  </div>
+</motion.section>
 
-      
+
     </main>
   );
 }
