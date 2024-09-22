@@ -1,6 +1,7 @@
 @import url('https://fonts.cdnfonts.com/css/recoleta');
 @import url('https://fonts.cdnfonts.com/css/poppins');
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url('https://fonts.cdnfonts.com/css/great-vibes');
 
 @tailwind base;
 @tailwind components;
@@ -15,3 +16,17 @@
 .font-DM{
   font-family: 'DM Sans', sans-serif;                                             
 }
+
+.font-Great{
+  font-family: 'Great Vibes', sans-serif;
+                                                
+}
+.menu-slide {
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.menu-slide.open {
+  transform: translateX(0);
+}
+

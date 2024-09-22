@@ -18,10 +18,11 @@ export default function Home() {
     }
   };
 
+  
   return (
-    <main className="min-h-screen bg-cover bg-center bg-no-repeat text-white bg-white space-y-64 md:space-y-24">
+    <main className="min-h-screen bg-gray-100 bg-cover bg-center bg-no-repeat text-white  space-y-64 md:space-y-24">
       {/* Top Section */}
-      <section className="flex justify-center items-center gap-5 min-h-screen pl-10">
+      <section className="py-20 md:py-0 flex justify-center items-center gap-5 min-h-screen md:pl-10">
         <div className="flex flex-col md:flex-row justify-center items-start gap-10 md:gap-4">
           <motion.div
             className="md:w-3/5 space-y-5 my-auto px-5"
@@ -64,7 +65,7 @@ export default function Home() {
           </motion.div>
 
           <motion.div
-            className="md:w-2/5 md:h-screen overflow-hidden"
+            className="w-2/5 h-screen overflow-hidden hidden md:block"
             initial={{ opacity: 0, x: 100 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
@@ -74,7 +75,21 @@ export default function Home() {
               width={500}
               height={200}
               alt="Profile Picture"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover "
+            />
+          </motion.div>
+          <motion.div
+            className="w-full  justify-center items-center md:w-2/5 md:h-screen overflow-hidden md:hidden block "
+            initial={{ opacity: 0, x: 100 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <Image
+              src="/profile-img.jpg"
+              width={500}
+              height={200}
+              alt="Profile Picture"
+              className="rounded-lg"
             />
           </motion.div>
         </div>
@@ -100,6 +115,7 @@ export default function Home() {
     
       <motion.section
         ref={scrollToSection}
+        id="about-me"
         className="h-screen flex flex-col justify-center items-start px-5 md:px-20 gap-4 "
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
@@ -117,7 +133,8 @@ My career aspirations include becoming a research and teaching professional in t
         </p>
       </motion.section>
       <motion.section
-        className="h-screen flex flex-col justify-center items-end px-20 gap-6"
+       id="research"
+        className="h-screen flex flex-col justify-center items-start md:items-end px-20 gap-6"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}>
@@ -128,7 +145,7 @@ My career aspirations include becoming a research and teaching professional in t
         </div>
           
           <p className="font-DM text-gray-500 text-sm">Here are some of my reasearch interest </p>
-          <div className="flex justify-end items-center flex-wrap gap-4">
+          <div className="flex  md:justify-end items-center flex-wrap gap-4">
             <ResearchInterestCard interest="Predictors of falls in older adults"/>
             <ResearchInterestCard interest="Mild traumatic brain injuries and mobility impairment"/>
             <ResearchInterestCard interest="Biomechanics and fall-risk intervention"/>
@@ -138,7 +155,8 @@ My career aspirations include becoming a research and teaching professional in t
 
       </motion.section>
       <motion.section
-  className="h-screen flex flex-col justify-center items-start px-20 gap-6"
+       id="articles&publications"
+  className="h-screen flex flex-col justify-center items-center md:items-start px-10 md:px-20 gap-6"
   initial={{ opacity: 0, y: 100 }}
   animate={{ opacity: 1, y: 0 }}
   transition={{ duration: 1 }}
@@ -154,7 +172,7 @@ My career aspirations include becoming a research and teaching professional in t
     {researchArticles.map((researchArticle) => (
       <div
         key={researchArticle.id}
-        className="bg-cover bg-center h-[60vh] w-[35rem] flex flex-col justify-end items-start"
+        className="bg-cover bg-center h-[60vh] md:w-[35rem] flex flex-col justify-end items-start"
         style={{ backgroundImage: `url(${researchArticle.imgSrc || '/default.jpg'})` }}
       >
         <div className="p-4 w-full space-y-7">
@@ -180,7 +198,8 @@ My career aspirations include becoming a research and teaching professional in t
   </div>
 </motion.section>
 <motion.section
-  className="h-auto flex flex-col justify-center items-center px-20 gap-6"
+ id="experience"
+  className="h-auto flex flex-col justify-center items-center px-10 md:px-20 gap-6"
   initial={{ opacity: 0, y: 100 }}
   animate={{ opacity: 1, y: 0 }}
   transition={{ duration: 1 }}
@@ -194,14 +213,14 @@ My career aspirations include becoming a research and teaching professional in t
   </p>
   <div className=" w-full flex flex-col justify-center items-center gap-20">
 {Experience.map((experience)=>(
-    <div key={experience.id} className="flex flex-row justify-between items-center gap-96">
-        <div className=" w-4/5 flex flex-col justify-center items-start gap-2">
+    <div key={experience.id} className="flex  flex-col md:flex-row md:justify-between items- gap-10 md:gap-96">
+        <div className=" md:w-4/5 flex flex-col justify-center items-start gap-2">
           <span className="text-gray-700 text-lg uppercase font-DM">{experience.startDate} - {experience.endDate}</span>
           <h4 className="text-3xl font-DM font-medium text-black">{experience.role}, {experience.company}</h4>
           <p className="text-md text-gray-500 font-DM">{experience.description}</p>
           </div>
-          <div className="w-1/5">
-            <button className="rounded-full border border-black px-5 py-2 text-md text-black">
+          <div className="md:w-1/5">
+            <button className="font-DM font-medium hover:bg-black hover:text-white transition-colors  border border-black px-5 py-2 text-md text-black">
               <Link href={experience.link}>
               Visit Link
               </Link>
@@ -211,6 +230,56 @@ My career aspirations include becoming a research and teaching professional in t
 ))}
   </div>
 </motion.section>
+<motion.section
+ id="contact"
+  className=" flex flex-col justify-center items-center px-20 md:px-10 gap-6"
+  initial={{ opacity: 0, y: 100 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 1 }}
+>
+<div className="flex justify-center items-center gap-4">
+    <hr className="bg-dark w-24 h-[0.2rem]" />
+    <h2 className="text-black font-DM text-6xl font-normal">Get In Touch</h2>
+    <hr className="bg-dark w-24 h-[0.2rem]" />
+  </div>
+  <div className="flex flex-col md:flex-row justify-center items-center gap-4 ">
+  <button className="bg-primary px-5 py-4 font-DM text-white">
+    <Link href="">
+    Send Me A Message
+    </Link>
+  </button>
+  <button className="px-5 py-4 font-DM text-primary border border-primary font-medium">
+    <Link href="">
+    Book A Call With Me
+    </Link>
+  </button>
+  </div>
+ 
+</motion.section>
+<footer className=" px-20  pb-10 md:py-10 flex flex-col md:flex-row justify-between items-center  md:items-start gap-4">
+<div className="flex justify-center items-center gap-5">
+<span className="text-black font-DM underline ">
+  <Link href="">
+  Linkedin
+  </Link>
+</span>
+<span className="text-black font-DM underline">
+  <Link href="">
+  Email
+  </Link>
+</span>
+<span className="text-md text-black font-DM underline">
+  <Link href="">
+  Research Gate
+  </Link>
+</span>
+</div>
+<div>
+<span className="text-md text-black font-DM">
+Developed by Selasie Sepenu❤️‍🔥
+</span>
+</div>
+</footer>
 
 
     </main>
