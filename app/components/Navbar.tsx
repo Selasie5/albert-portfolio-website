@@ -20,7 +20,7 @@ const Navbar = () => {
 
     return (
         <>
-            <nav className='bg-white h-[12vh] flex justify-between items-center px-20'>
+            <nav className='bg-white relative h-[12vh] flex justify-between items-center px-10 md:px-20'>
                 <div>
                     <Link href="/">
                         <span className='font-Great text-black font-bold text-4xl cursor-pointer'>
@@ -50,7 +50,7 @@ const Navbar = () => {
 
             {/* Animate menu with transform and opacity */}
             <div
-                className={`fixed top-0 left-0 h-screen w-full flex flex-col justify-center gap-10 bg-white z-50 transition-transform duration-300 ease-in-out 
+                className={`absolute top-0 left-0 h-screen w-full flex flex-col justify-center gap-10 bg-white z-50 transition-transform duration-300 ease-in-out 
                 ${isOpen ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'}`}
             >
                 <div className='flex justify-end items-center px-10 hover:cursor group' onClick={toggleMenu}>
@@ -62,7 +62,7 @@ const Navbar = () => {
                     {navbarLinks.map((link) => (
                         <div key={link.id} className='w-full text-center group'>
                             <Link href={link.href} legacyBehavior >
-                                <a className="text-3xl font-Poppins text-gray-500 font-[400] flex justify-between items-center transition-colors duration-200 group-hover:text-black" onClick={()=>setIsOpen(false)}>
+                                <a className="text-2xl md:text-3xl font-Poppins text-gray-500 font-[400] flex justify-between items-center transition-colors duration-200 group-hover:text-black" onClick={()=>setIsOpen(false)}>
                                     {link.tag}
                                     <span className='text-xl'>{link.id}</span>
                                 </a>
