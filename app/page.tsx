@@ -134,7 +134,7 @@ My career aspirations include becoming a research and teaching professional in t
       </motion.section>
       <motion.section
        id="research"
-        className="h-screen flex flex-col justify-center items-start md:items-end px-10 md:px-20 gap-6"
+        className="h-screen flex flex-col justify-center items-start md:items-end px-5 md:px-20 gap-6"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}>
@@ -156,7 +156,7 @@ My career aspirations include becoming a research and teaching professional in t
       </motion.section>
       <motion.section
        id="articles&publications"
-  className="h-screen flex flex-col justify-center items-center md:items-start px-10 md:px-20 gap-6"
+  className="h-screen flex flex-col justify-center items-center md:items-start px-5 md:px-20 gap-6"
   initial={{ opacity: 0, y: 100 }}
   animate={{ opacity: 1, y: 0 }}
   transition={{ duration: 1 }}
@@ -199,7 +199,7 @@ My career aspirations include becoming a research and teaching professional in t
 </motion.section>
 <motion.section
  id="experience"
-  className="h-auto flex flex-col justify-center items-center px-10 md:px-20 gap-6"
+  className="h-auto flex flex-col justify-center items-center px-5 md:px-20 gap-6"
   initial={{ opacity: 0, y: 100 }}
   animate={{ opacity: 1, y: 0 }}
   transition={{ duration: 1 }}
@@ -232,7 +232,7 @@ My career aspirations include becoming a research and teaching professional in t
 </motion.section>
 <motion.section
  id="contact"
-  className=" flex flex-col justify-center items-center px-20 md:px-10 gap-6"
+  className=" flex flex-col justify-center items-center px-5 md:px-10  gap-10 md:gap-6"
   initial={{ opacity: 0, y: 100 }}
   animate={{ opacity: 1, y: 0 }}
   transition={{ duration: 1 }}
@@ -242,7 +242,7 @@ My career aspirations include becoming a research and teaching professional in t
     <h2 className="text-black font-DM text-4xl md:text-6xl font-normal">Get In Touch</h2>
     <hr className="bg-dark w-24 h-[0.2rem]" />
   </div>
-  <div className="flex flex-col md:flex-row justify-center items-center gap-4 ">
+  <div className="flex md:flex-row justify-center items-center gap-4 ">
   <button className="bg-primary px-5 py-4 font-DM text-white">
     <Link href="">
     Send Me A Message
