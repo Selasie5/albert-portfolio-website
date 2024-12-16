@@ -30,7 +30,7 @@ export default function Home() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="font-DM text-6xl font-medium text-black ">
+            <h1 className="font-DM text-4xl md:text-6xl font-medium text-black ">
               Hello! I&apos;m Albert a PhD Student and Biomedical Researcher at St. Augusta University
             </h1>
             <p className="font-DM text-md font-normal text-gray-500 md:w-4/5 leading-normal">
@@ -122,7 +122,7 @@ export default function Home() {
         transition={{ duration: 1 }}>
           <div className="flex justify-center items-center gap-4">
             <hr className="bg-dark w-24 h-[0.2rem]"/>
-          <h2 className="text-black font-DM text-6xl font-normal">Intro</h2>
+          <h2 className="text-black font-DM text-4xl md:text-6xl font-normal">Intro</h2>
           </div>
        
         <p className="font-DM text-black text-xl leading-normal text-justify">
@@ -140,7 +140,7 @@ My career aspirations include becoming a research and teaching professional in t
         transition={{ duration: 1 }}>
           <div className="flex  justify-center items-center gap-4">
             <hr className="bg-dark w-24 h-[0.2rem]"/>
-          <h2 className="text-black font-DM text-6xl font-normal">Research</h2>
+          <h2 className="text-black font-DM text-4xl md:text-6xl font-normal">Research</h2>
           
         </div>
           
@@ -163,7 +163,7 @@ My career aspirations include becoming a research and teaching professional in t
 >
   <div className="flex justify-center items-center gap-4">
     <hr className="bg-dark w-24 h-[0.2rem]" />
-    <h2 className="text-black font-DM text-6xl font-normal">Articles & Publications</h2>
+    <h2 className="text-black font-DM text-4xl md:text-6xl font-normal">Articles & Publications</h2>
   </div>
   <p className="text-sm text-gray-500 font-DM">
     I have contributed actively to some key research topics and articles
@@ -206,7 +206,7 @@ My career aspirations include becoming a research and teaching professional in t
 >
   <div className="flex justify-center items-center gap-4">
     <hr className="bg-dark w-24 h-[0.2rem]" />
-    <h2 className="text-black font-DM text-6xl font-normal">Working & Teaching Experiences</h2>
+    <h2 className="text-black font-DM text-4xl md:text-6xl font-normal">Working & Teaching Experiences</h2>
   </div>
   <p className="text-sm text-gray-500 font-DM">
     I have contributed actively to some key research topics and articles
@@ -239,7 +239,7 @@ My career aspirations include becoming a research and teaching professional in t
 >
 <div className="flex justify-center items-center gap-4">
     <hr className="bg-dark w-24 h-[0.2rem]" />
-    <h2 className="text-black font-DM text-6xl font-normal">Get In Touch</h2>
+    <h2 className="text-black font-DM text-4xl md:text-6xl font-normal">Get In Touch</h2>
     <hr className="bg-dark w-24 h-[0.2rem]" />
   </div>
   <div className="flex flex-col md:flex-row justify-center items-center gap-4 ">
