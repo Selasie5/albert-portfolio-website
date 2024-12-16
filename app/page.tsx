@@ -134,7 +134,7 @@ My career aspirations include becoming a research and teaching professional in t
       </motion.section>
       <motion.section
        id="research"
-        className="h-screen flex flex-col justify-center items-start md:items-end px-20 gap-6"
+        className="h-screen flex flex-col justify-center items-start md:items-end px-10 md:px-20 gap-6"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}>
