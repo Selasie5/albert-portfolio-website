@@ -22,17 +22,18 @@ export default function Loader() {
   }, []);
 
   return (
-    <div className="  fixed inset-0 flex flex-col items-end justify-end px-20 py-10 container font-DM   z-50">
-      <span className=' text-black text-5xl'>
-      {progress} %
+    <div className="  fixed inset-0 flex flex-col items-end justify-end px-20 py-10 container font-Reco  z-50">
+      <span className=' text-black text-5xl '>
+      {progress}{  } 
+      <span className='font-DM'>{ }%</span> 
       </span>
       <p className="mt-4 text-black text-sm font-extralight italic">
         {progress <= 10}
-        {progress > 10 && progress <= 25 }
-        {progress > 25 && progress <= 50}
-        {progress > 50 && progress <= 75}
-        {progress > 75 && progress <= 99 }
-        {progress === 100 }
+        {progress > 10 && progress <= 25 && "Willkommen" }
+        {progress > 25 && progress <= 50 && "Bienvenue !"}
+        {progress > 50 && progress <= 75 && "  Välkommen!"}
+        {progress > 75 && progress <= 99 &&  "Witaj!" }
+        {progress === 100 && "Welcome" }
       </p>
       
     </div>
