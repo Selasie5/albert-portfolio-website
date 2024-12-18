@@ -2,14 +2,16 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import ResearchInterestCard from "./components/ResearchInterestCard";
 import { researchArticles } from "./data/ResearchArticles";
 import { Experience } from "./data/Experience";
+import Loader from "./components/Loader";
 
 
 
 export default function Home() {
+  const [loading, setLoading] = useState(true);
   const scrollToSection = useRef<HTMLDivElement>(null);
 
   const handleScroll = () => {
@@ -17,8 +19,17 @@ export default function Home() {
       scrollToSection.current.scrollIntoView({ behavior: "smooth" });
     }
   };
+  useEffect(() => {
+    // Simulate a loading delay
+    const loadingTimeout = setTimeout(() => {
+      setLoading(false);
+    }, 11000); // Adjust the duration as needed
 
-  
+    return () => clearTimeout(loadingTimeout);
+  }, []);
+  if(loading){
+    return <Loader/>
+  }
   return (
     <main className="min-h-screen bg-gray-100 bg-cover bg-center bg-no-repeat text-white  space-y-64 md:space-y-24">
       {/* Top Section */}
