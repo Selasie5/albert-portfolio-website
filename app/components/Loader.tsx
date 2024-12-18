@@ -27,11 +27,11 @@ export default function Loader() {
       {progress}{  } 
       <span className='font-DM'>{ }%</span> 
       </span>
-      <p className="mt-4 text-black text-sm font-extralight italic">
+      <p className="mt-4 text-primary text-xl font-bold italic">
         {progress <= 10}
         {progress > 10 && progress <= 25 && "Willkommen" }
         {progress > 25 && progress <= 50 && "Bienvenue !"}
-        {progress > 50 && progress <= 75 && "  Välkommen!"}
+        {progress > 50 && progress <= 75 && "  Valkommen!"}
         {progress > 75 && progress <= 99 &&  "Witaj!" }
         {progress === 100 && "Welcome" }
       </p>

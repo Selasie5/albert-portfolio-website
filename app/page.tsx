@@ -109,7 +109,7 @@ export default function Home() {
       <div className="absolute bottom-1 md:bottom-5 right-5">
         <motion.button
           onClick={handleScroll}
-          className="border-b border-b-white text-white  font-Reco text-lg tracking-wide font-normal flex justify-center items-center gap-2 "
+          className="bg-primary/70 px-4 py-2 text-white  font-Reco text-lg tracking-wide font-normal flex justify-center items-center gap-2 hover:font-bold "
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1, duration: 0.5 }}
@@ -254,12 +254,12 @@ My career aspirations include becoming a research and teaching professional in t
     <hr className="bg-dark w-24 h-[0.2rem]" />
   </div>
   <div className="flex md:flex-row justify-center items-center gap-4 ">
-  <button className="bg-primary px-5 py-4 font-DM text-white">
+  <button className="bg-primary px-5 py-4 font-DM text-white hover:bg-primary/20">
     <Link href="">
     Send Me A Message
     </Link>
   </button>
-  <button className="px-5 py-4 font-DM text-primary border border-primary font-medium">
+  <button className="px-5 py-4 font-DM text-primary border border-primary font-medium hover:bg-black hover:text-white">
     <Link href="">
     Book A Call With Me
     </Link>
@@ -269,18 +269,18 @@ My career aspirations include becoming a research and teaching professional in t
 </motion.section>
 <footer className=" px-20  pb-10 md:py-10 flex flex-col md:flex-row justify-between items-center  md:items-start gap-4">
 <div className="flex justify-center items-center gap-5">
-<span className="text-black font-DM underline ">
-  <Link href="">
+<span className="text-black font-DM underline hover:text-primary">
+  <Link href="https://www.linkedin.com/in/albertokrah/">
   Linkedin
   </Link>
 </span>
-<span className="text-black font-DM underline">
-  <Link href="">
+<span className="text-black font-DM underline hover:text-primary">
+  <Link href="albertokrah@gmail.com">
   Email
   </Link>
 </span>
-<span className="text-md text-black font-DM underline">
-  <Link href="">
+<span className="text-md text-black font-DM underline hover:text-primary">
+  <Link href="https://www.researchgate.net/profile/Albert-Okrah">
   Research Gate
   </Link>
 </span>
