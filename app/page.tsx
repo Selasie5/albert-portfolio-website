@@ -255,7 +255,7 @@ My career aspirations include becoming a research and teaching professional in t
   </div>
   <div className="flex md:flex-row justify-center items-center gap-4 ">
   <button className="bg-primary px-5 py-4 font-DM text-white hover:bg-primary/20">
-    <Link href="">
+    <Link href="okrahalbert@gmail.com">
     Send Me A Message
     </Link>
   </button>
@@ -270,7 +270,7 @@ My career aspirations include becoming a research and teaching professional in t
   </Link>
 </span>
 <span className="text-black font-DM underline hover:text-primary">
-  <Link href="albertokrah@gmail.com">
+  <Link href="okrahalbert@gmail.com">
   Email
   </Link>
 </span>
