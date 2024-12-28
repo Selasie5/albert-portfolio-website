@@ -96,7 +96,7 @@ export default function Home() {
             transition={{ duration: 0.8 }}
           >
             <Image
-              src="/profile-img.jpg"
+              src="/aobert.jpg"
               width={500}
               height={200}
               alt="Profile Picture"
@@ -253,9 +253,9 @@ My career aspirations include becoming a research and teaching professional in t
     <h2 className="text-black font-DM text-4xl md:text-6xl font-normal">Get In Touch</h2>
     <hr className="bg-dark w-24 h-[0.2rem]" />
   </div>
-  <div className="flex md:flex-row justify-center items-center gap-4 ">
+  <div className="flex md:flex-row justify-center items-center gap-4 w-full ">
   <button className="bg-primary px-5 py-4 font-DM text-white hover:bg-primary/20">
-    <Link href="okrahalbert@gmail.com">
+    <Link href="pokrah@augusta.edu">
     Send Me A Message
     </Link>
   </button>
@@ -270,7 +270,7 @@ My career aspirations include becoming a research and teaching professional in t
   </Link>
 </span>
 <span className="text-black font-DM underline hover:text-primary">
-  <Link href="okrahalbert@gmail.com">
+  <Link href="pokrah@augusta.edu">
   Email
   </Link>
 </span>
