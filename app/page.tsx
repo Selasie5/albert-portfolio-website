@@ -259,11 +259,6 @@ My career aspirations include becoming a research and teaching professional in t
     Send Me A Message
     </Link>
   </button>
-  <button className="px-5 py-4 font-DM text-primary border border-primary font-medium hover:bg-black hover:text-white">
-    <Link href="">
-    Book A Call With Me
-    </Link>
-  </button>
   </div>
  
 </motion.section>
