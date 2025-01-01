@@ -31,7 +31,7 @@ export default function Home() {
     return <Loader />;
   }
   return (
-    <main className="min-h-screen bg-gray-100 bg-cover bg-center bg-no-repeat text-white  space-y-72 md:space-y-16">
+    <main className="h-auto bg-gray-100 bg-cover bg-center bg-no-repeat flex flex-col justify-center items-center text-white space-y-72 md:space-y-16">
       {/* Top Section */}
       <section className="pt-20 pb-5 md:py-0 flex justify-center items-center gap-5 min-h-screen md:pl-10">
         <div className="flex flex-col md:flex-row justify-center items-start gap-10 md:gap-4">
@@ -141,7 +141,7 @@ export default function Home() {
       <motion.section
         ref={scrollToSection}
         id="about-me"
-        className="h-screen flex flex-col justify-center items-start px-5 md:px-20 gap-4 py-10 "
+        className="h-screen flex flex-col justify-center items-start px-5 md:px-20 gap-4 "
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
