@@ -31,7 +31,7 @@ export default function Home() {
     return <Loader />;
   }
   return (
-    <main className="h-auto bg-gray-100 bg-cover bg-center bg-no-repeat flex flex-col justify-center items-center text-white space-y-72 md:space-y-16">
+    <main className="h-auto bg-gray-100 bg-cover bg-center bg-no-repeat  text-white space-y-36  md:space-y-16">
       {/* Top Section */}
       <section className="pt-20 pb-5 md:py-0 flex justify-center items-center gap-5 min-h-screen md:pl-10">
         <div className="flex flex-col md:flex-row justify-center items-start gap-10 md:gap-4">
@@ -176,7 +176,7 @@ export default function Home() {
       {/* Research and Publications */}
       <motion.section
         id="research"
-        className="h-screen flex flex-col justify-center items-start md:items-start mt-48 md:mt-0 px-5 md:px-20 gap-6"
+        className=" flex flex-col justify-center items-start md:items-start mt-48 md:mt-0 px-5 md:px-20 gap-6"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
@@ -191,7 +191,7 @@ export default function Home() {
         <p className="font-DM text-gray-500 text-sm">
           Explore my research work{" "}
         </p>
-        <div className=" w-full flex flex-row md:justify-center items-center gap-4">
+        <div className=" w-full flex-col flex md:flex-row md:justify-center items-center gap-4">
           <ResearchInterestCard interest="Fall related pyschological harm" />
           <ResearchInterestCard interest="Mild traumatic brain injuries and mobility impairment" />
         </div>
