@@ -176,7 +176,7 @@ export default function Home() {
       {/* Research and Publications */}
       <motion.section
         id="research"
-        className="h-screen flex flex-col justify-center items-start md:items-start py-10 px-5 md:px-20 gap-6"
+        className="h-screen flex flex-col justify-center items-start md:items-start mt-48 md:mt-0 px-5 md:px-20 gap-6"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
@@ -242,7 +242,7 @@ export default function Home() {
 
       <motion.section
         id="experience"
-        className="h-auto flex flex-col justify-center items-center px-5 md:px-20 gap-6"
+        className="h-auto flex flex-col justify-center items-center mt-48 md:mt-0  px-5 md:px-20 gap-6"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
