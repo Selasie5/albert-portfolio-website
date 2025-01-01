@@ -7,7 +7,6 @@ const Navbar = () => {
     const navbarLinks = [
         { id: "01", tag: "About Me", href: "/#about-me" },
         { id: "02", tag: "Research & Publications", href: "/#research" },
-        { id: "03", tag: "Articles/Publications", href: "/#articles&publications" },
         { id: "04", tag: "Conference Presentations", href: "/#experience" },
         { id: "05", tag: "Contact Me", href: "/#contact" },
     ];
