@@ -212,18 +212,18 @@ export default function Home() {
                 </h3>
                 <hr className="bg-white h-[0.05rem] w-full" />
                 <div className="flex  justify-start items-center gap-4 font-DM">
-                  <p className="text-white text-md">
+                  <p className="text-white text-sm md:text-md">
                     {researchArticle.dateOfPublication}
                   </p>
                   <span className="bg-white w-2 h-2 rounded-md"></span>
-                  <p className="text-white text-md">{researchArticle.topic}</p>
+                  <p className="text-white md:text-md text-sm">{researchArticle.topic}</p>
                   <span className="bg-white w-2 h-2 rounded-md"></span>
 
                   {researchArticle.link && (
                     <Link
                       href={researchArticle.link}
                       passHref
-                      className="text-md"
+                      className=" text-sm md:text-md"
                     >
                       Read More
                     </Link>
