@@ -6,7 +6,7 @@ import { useEffect, useRef, useState } from "react";
 import ResearchInterestCard from "./components/ResearchInterestCard";
 import { researchArticles } from "./data/ResearchArticles";
 import { twentyThreeExperience, twentyFourExperience } from "./data/Experience";
-import { FaLinkedin,FaSquareXTwitter,FaResearchgate } from "react-icons/fa6";
+import { FaLinkedin,FaSquareXTwitter,FaResearchgate ,FaGoogleScholar } from "react-icons/fa6";
 import { IoMdMailUnread } from "react-icons/io";
 import Loader from "./components/Loader";
 
@@ -45,11 +45,7 @@ export default function Home() {
               Hello! I am Albert K. Okrah, a PhD student and Graduate Research Assistant at Augusta University
             </h1>
             <p className="font-DM text-md font-normal text-gray-500 md:w-4/5 leading-normal">
-              My research focuses on fall-related traumatic brain injury in
-              older adults and the psychological harm associated wiht falls
-              across all populations. I aim to identify fall-related risk
-              factors , developed target preventions, and enhnace research and
-              clinical approaches to improve well being.
+            My research focuses on fall-related mild traumatic brain injury in older adults and the psychological harm associated with falls across all populations. I aim to identify fall-related risk factors, develop targeted prevention strategies, and enhance research and clinical approaches to improve well-being
             </p>
             <button className="bg-primary/80 text-white text-[1rem] font-DM font-normal text-md px-10 py-4 rounded-sm group transition-all">
               <Link href="" className="flex justify-center items-center gap-3">
@@ -137,42 +133,7 @@ export default function Home() {
         </motion.button>
       </div>
 
-      {/* Intro Section */}
-      <motion.section
-        ref={scrollToSection}
-        id="about-me"
-        className="h-screen flex flex-col justify-center items-start px-5 md:px-20 gap-4 "
-        initial={{ opacity: 0, y: 100 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-      >
-        <div className="flex justify-center items-center gap-4">
-          <hr className="bg-dark w-24 h-[0.2rem]" />
-          <h2 className="text-black font-DM text-4xl md:text-6xl font-normal">
-            Intro
-          </h2>
-        </div>
-
-        <p className="font-DM text-black text-xl leading-normal text-justify">
-          I am a PhD student in the Applied Health Sciences Program at Augusta
-          University, where my research focuses on predictors of falls in older
-          adults with mild traumatic brain injuries and the psychological harm
-          associated with falls. Before starting my PhD, I earned a Bachelor’s
-          degree in Biomedical Engineering from Kwame Nkrumah University of
-          Science and Technology (KNUST), where I worked as a biomechanics
-          research and teaching assistant.
-          <br />
-          My career aspirations include becoming a research and teaching
-          professional specializing in fall-risk prediction and prevention, with
-          a focus on improving mobility, safety, and psychological well-being
-          for individuals affected by falls. Ultimately, I aim to establish my
-          own research laboratory to develop interventions that mitigate fall
-          risks, address the psychological impacts of falls, and enhance the
-          quality of life for individuals with mild traumatic brain injuries and
-          related conditions.
-        </p>
-      </motion.section>
-
+     
       {/* Research and Publications */}
       <motion.section
         id="research"
@@ -191,9 +152,9 @@ export default function Home() {
         <p className="font-DM text-gray-500 text-sm">
           Explore my research work{" "}
         </p>
-        <div className=" w-full flex-col flex md:flex-row md:justify-center items-center gap-4">
-          <ResearchInterestCard interest="Fall related pyschological harm" />
-          <ResearchInterestCard interest="Mild traumatic brain injuries and mobility impairment" />
+        <div className=" w-full flex-col flex md:flex-row md:justify-center items-center">
+          {/* <ResearchInterestCard interest="Fall related pyschological harm" />
+          <ResearchInterestCard interest="Mild traumatic brain injuries and mobility impairment" /> */}
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-20">
           {researchArticles.map((researchArticle) => (
@@ -335,6 +296,11 @@ export default function Home() {
           <span className="text-md text-black font-DM underline hover:text-primary">
             <Link href="https://www.researchgate.net/profile/Albert-Okrah">
               <FaResearchgate size={30}/>
+            </Link>
+          </span>
+          <span className="text-md text-black font-DM underline hover:text-primary">
+            <Link href="https://scholar.google.com/citations?hl=en&user=82CLCSoAAAAJ">
+              <FaGoogleScholar size={30}/>
             </Link>
           </span>
         </div>
