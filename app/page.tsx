@@ -3,7 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
-import ResearchInterestCard from "./components/ResearchInterestCard";
 import { researchArticles } from "./data/ResearchArticles";
 import { twentyThreeExperience, twentyFourExperience } from "./data/Experience";
 import { FaLinkedin,FaSquareXTwitter,FaResearchgate ,FaGoogleScholar } from "react-icons/fa6";
