@@ -220,28 +220,27 @@ export default function Home() {
         <div className="flex flex-col justify-start items-start gap-4">
           <h2 className="text-4xl font-bold text-primary">2024</h2>
 
-          <div className=" w-full flex flex-col justify-center items-center gap-20">
+          <div className=" w-full flex flex-col justify-center items-start gap-20">
             {twentyFourExperience.map((experience) => (
               <div
                 key={experience.id}
                 className="flex  flex-col md:flex-row md:justify-between items- gap-10 md:gap-96"
               >
-                <div className=" md:w-4/5 flex flex-col justify-center items-start gap-2">
+                <div className=" w-full flex flex-col justify-center items-start gap-2">
                   <span className="text-gray-700 text-lg uppercase font-DM">
                     {experience.startDate} - {experience.endDate}
                   </span>
-                  <h4 className="text-3xl font-DM font-medium text-black">
-                   {experience.company}
+                  <h4 className="text-3xl font-DM font-medium text-blue-800 hover:text-blue-950 underline">
+                    <Link href={experience.link} >
+                    {experience.company}
+                    </Link>
+                  
                   </h4>
                   <p className="text-md text-gray-500 font-DM">
                     {experience.description}
                   </p>
                 </div>
-                <div className="md:w-1/5">
-                  <button className="font-DM font-medium hover:bg-black hover:text-white transition-colors  border border-black px-5 py-2 text-md text-black">
-                    <Link href={experience.link}>Visit Link</Link>
-                  </button>
-                </div>
+                
               </div>
             ))}
           </div>
@@ -254,22 +253,21 @@ export default function Home() {
                 key={experience.id}
                 className="flex  flex-col md:flex-row md:justify-between items- gap-10 md:gap-96"
               >
-                <div className=" md:w-4/5 flex flex-col justify-center items-start gap-2">
+                <div className=" w-full flex flex-col justify-center items-start gap-2">
                   <span className="text-gray-700 text-lg uppercase font-DM">
                     {experience.startDate} - {experience.endDate}
                   </span>
-                  <h4 className="text-3xl font-DM font-medium text-black">
-                   {experience.company}
+                  <h4 className="text-3xl font-DM font-medium text-blue-800 hover:text-blue-950 underline">
+                    <Link href={experience.link} >
+                    {experience.company}
+                    </Link>
+                  
                   </h4>
                   <p className="text-md text-gray-500 font-DM">
                     {experience.description}
                   </p>
                 </div>
-                <div className="md:w-1/5">
-                  <button className="font-DM font-medium hover:bg-black hover:text-white transition-colors  border border-black px-5 py-2 text-md text-black">
-                    <Link href={experience.link}>Visit Link</Link>
-                  </button>
-                </div>
+                
               </div>
             ))}
           </div>
