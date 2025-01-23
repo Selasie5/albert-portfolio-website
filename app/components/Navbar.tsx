@@ -8,7 +8,7 @@ const Navbar = () => {
         { id: "01", tag: "About Me", href: "/#about-me" },
         { id: "02", tag: "Research & Publications", href: "/#research" },
         { id: "04", tag: "Conference Presentations", href: "/#experience" },
-        { id: "05", tag: "Contact Me", href: "/#contact" },
+        { id: "05", tag: "Contact Me", href: "mailto:pokrah@augusta.edu" },
     ];
 
     const [isOpen, setIsOpen] = useState<boolean>(false);

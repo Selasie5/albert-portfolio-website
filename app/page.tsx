@@ -82,8 +82,8 @@ export default function Home() {
           >
             <Image
               src="/aobert.jpg"
-              width={500}
-              height={200}
+            width={1920}
+              height={1080}
               alt="Profile Picture"
               className="w-full h-full object-cover "
             />
