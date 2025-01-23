@@ -29,17 +29,17 @@ interface ExperienceDataTypes{
       "id": 3,
       "startDate": "Jul 28",
       "endDate": "Aug 01",
-      "company": "Alzheimer's Association International Conference,Philadelphia PA",
+      "company": "Dual-task disparities in gait and functional mobility among older adults with a fall-related mild traumatic brain injury and people living with dementia",
       "description": " Poster presentation at Alzheimer's Association International Conference (AAIC) in Philadelphia, PA",
-      "link": "https://aaic.alz.org/about/overview.asp"
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=82CLCSoAAAAJ&citation_for_view=82CLCSoAAAAJ:u-x6o8ySG0sC"
     },
     {
       "id": 4,
       "startDate": "Mar 8",
       "endDate": "Mar 8",
-      "company": "Graduate Research Day at Augusta University, Georgia GA",
+      "company": "A Thesis Investigating Fall-Related Physical and Psychological Harm",
       "description": "Poster presentation during Graduate Research Day at Augusta University, GA.",
-      "link": "https://www.augusta.edu/"
+      "link": "https://www.augusta.edu/gradschool/documents/graduate-research-day.pdf"
     }
   ]
   
